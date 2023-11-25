@@ -30,12 +30,12 @@ func findDifferences(resource, updatedResource map[string]interface{}) map[strin
 			differences[key] = nil
 		}
 	}
-
 	for key, value2 := range updatedResource {
 		if _, ok := updatedResource[key]; !ok {
 			differences[key] = value2
 		}
 	}
+
 	return differences
 }
 
