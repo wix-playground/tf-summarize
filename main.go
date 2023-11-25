@@ -16,6 +16,8 @@ var version = "development"
 func main() {
 	printVersion := flag.Bool("v", false, "print version")
 	tree := flag.Bool("tree", false, "[Optional] print changes in tree format")
+	summary := flag.Bool("summary", false, "[Optional] print changes in summary format")
+
 	json := flag.Bool("json", false, "[Optional] print changes in json format")
 	separateTree := flag.Bool("separate-tree", false, "[Optional] print changes in tree format for add/delete/change/recreate changes")
 	drawable := flag.Bool("draw", false, "[Optional, used only with -tree or -separate-tree] draw trees instead of plain tree")
@@ -51,7 +53,7 @@ func main() {
 
 	terraformState.FilterNoOpResources()
 
-	newWriter := writer.CreateWriter(*tree, *separateTree, *drawable, *md, *json, terraformState)
+	newWriter := writer.CreateWriter(*tree, *separateTree, *drawable, *md, *json, *summary, terraformState)
 
 	var outputFile io.Writer = os.Stdout
 

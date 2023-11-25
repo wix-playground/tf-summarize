@@ -10,7 +10,7 @@ type Writer interface {
 	Write(writer io.Writer) error
 }
 
-func CreateWriter(tree, separateTree, drawable, mdEnabled, json bool, terraformState terraformstate.TerraformState) Writer {
+func CreateWriter(tree, separateTree, drawable, mdEnabled, json, summary bool, terraformState terraformstate.TerraformState) Writer {
 
 	if tree {
 		return NewTreeWriter(terraformState.ResourceChanges, drawable)
@@ -20,6 +20,9 @@ func CreateWriter(tree, separateTree, drawable, mdEnabled, json bool, terraformS
 	}
 	if json {
 		return NewJSONWriter(terraformState.ResourceChanges)
+	}
+	if summary {
+		return NewSummaryWriter(terraformState.AllResourceChanges())
 	}
 
 	return NewTableWriter(terraformState.AllResourceChanges(), terraformState.AllOutputChanges(), mdEnabled)
