@@ -36,7 +36,6 @@ func findDifferences(resource, updatedResource map[string]interface{}) map[strin
 			differences[key] = value2
 		}
 	}
-
 	return differences
 }
 
