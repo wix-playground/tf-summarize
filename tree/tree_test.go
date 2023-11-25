@@ -3,7 +3,7 @@ package tree
 import (
 	"testing"
 
-	"github.com/dineshba/tf-summarize/terraformstate"
+	"github.com/hayaah/tf-summarize/terraformstate"
 	"github.com/stretchr/testify/assert"
 )
 

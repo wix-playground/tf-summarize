@@ -6,7 +6,7 @@ import (
 	"io"
 	"reflect"
 
-	"github.com/dineshba/tf-summarize/terraformstate"
+	"github.com/hayaah/tf-summarize/terraformstate"
 )
 
 type Resource struct {

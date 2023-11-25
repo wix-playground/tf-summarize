@@ -20,7 +20,7 @@ jobs:
 
     - name: Install terraform-plan-summary
       run: |
-        REPO="dineshba/tf-summarize"
+        REPO="hayaah/tf-summarize"
         curl -LO https://github.com/$REPO/releases/latest/download/tf-summarize_linux_amd64.zip
         tmpDir=$(mktemp -d -t tmp.XXXXXXXXXX)
         mv tf-summarize_linux_amd64.zip $tmpDir

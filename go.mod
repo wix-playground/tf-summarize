@@ -1,4 +1,4 @@
-module github.com/dineshba/tf-summarize
+module github.com/hayaah/tf-summarize
 
 go 1.20
 

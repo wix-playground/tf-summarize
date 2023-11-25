@@ -3,7 +3,7 @@ package writer
 import (
 	"io"
 
-	"github.com/dineshba/tf-summarize/terraformstate"
+	"github.com/hayaah/tf-summarize/terraformstate"
 )
 
 type Writer interface {

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/dineshba/tf-summarize/terraformstate"
+	"github.com/hayaah/tf-summarize/terraformstate"
 )
 
 type JSONParser struct {

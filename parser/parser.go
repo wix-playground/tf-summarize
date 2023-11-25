@@ -3,8 +3,8 @@ package parser
 import (
 	"strings"
 
-	"github.com/dineshba/tf-summarize/reader"
-	"github.com/dineshba/tf-summarize/terraformstate"
+	"github.com/hayaah/tf-summarize/reader"
+	"github.com/hayaah/tf-summarize/terraformstate"
 )
 
 type Parser interface {

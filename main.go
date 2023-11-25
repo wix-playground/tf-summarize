@@ -6,9 +6,9 @@ import (
 	"io"
 	"os"
 
-	"github.com/dineshba/tf-summarize/parser"
-	"github.com/dineshba/tf-summarize/reader"
-	"github.com/dineshba/tf-summarize/writer"
+	"github.com/hayaah/tf-summarize/parser"
+	"github.com/hayaah/tf-summarize/reader"
+	"github.com/hayaah/tf-summarize/writer"
 )
 
 var version = "development"

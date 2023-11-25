@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "github" {
-  owner = "dineshba"
+  owner = "hayaah"
 }
 
 locals {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/dineshba/tf-summarize/terraformstate"
+	"github.com/hayaah/tf-summarize/terraformstate"
 	"github.com/olekukonko/tablewriter"
 )
 

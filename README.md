@@ -1,9 +1,9 @@
 ## tf-summarize (Terraform Summarizer)
 
-[![Build](https://github.com/dineshba/terraform-plan-summary/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/dineshba/terraform-plan-summary/actions/workflows/build.yml)
-[![goreleaser](https://github.com/dineshba/terraform-plan-summary/actions/workflows/release.yml/badge.svg)](https://github.com/dineshba/terraform-plan-summary/actions/workflows/release.yml)
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/dineshba/terraform-plan-summary)
-[![](https://img.shields.io/badge/License-MIT%202.0-blue.svg)](https://github.com/dineshba/tf-summarize/blob/main/LICENSE)
+[![Build](https://github.com/hayaah/terraform-plan-summary/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/hayaah/terraform-plan-summary/actions/workflows/build.yml)
+[![goreleaser](https://github.com/hayaah/terraform-plan-summary/actions/workflows/release.yml/badge.svg)](https://github.com/hayaah/terraform-plan-summary/actions/workflows/release.yml)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/hayaah/terraform-plan-summary)
+[![](https://img.shields.io/badge/License-MIT%202.0-blue.svg)](https://github.com/hayaah/tf-summarize/blob/main/LICENSE)
 
 `tf-summarize` is a command-line utility to print the summary of the terraform plan
 
@@ -45,7 +45,7 @@ If demo is slower for you, please see [examples](#examples) and [screenshot](#sc
 
 #### Using Go
 ```sh
-go install github.com/dineshba/tf-summarize@latest
+go install github.com/hayaah/tf-summarize@latest
 ```
 
 #### Using Brew
@@ -64,14 +64,14 @@ asdf install tf-summarize latest
 
 #### Using Docker
 ```sh
-docker run -v $PWD:/workspace -w /workspace ghcr.io/dineshba/tf-summarize -v # prints version
-docker run -v $PWD:/workspace -w /workspace ghcr.io/dineshba/tf-summarize tfplan.json
-docker run -v $PWD:/workspace -w /workspace ghcr.io/dineshba/tf-summarize -tree tfplan.json
+docker run -v $PWD:/workspace -w /workspace ghcr.io/hayaah/tf-summarize -v # prints version
+docker run -v $PWD:/workspace -w /workspace ghcr.io/hayaah/tf-summarize tfplan.json
+docker run -v $PWD:/workspace -w /workspace ghcr.io/hayaah/tf-summarize -tree tfplan.json
 # see example section for more examples
 
 
 # add alias if needed
-alias tf-summarize="docker run -v $PWD:/workspace -w /workspace ghcr.io/dineshba/tf-summarize"
+alias tf-summarize="docker run -v $PWD:/workspace -w /workspace ghcr.io/hayaah/tf-summarize"
 tf-summarize tfplan.json
 # see example section for more examples
 ```
@@ -91,7 +91,7 @@ steps:
 For more customization options, kindly refer to the [documentation here](https://github.com/kishaningithub/setup-tf-summarize#usage)
 
 #### Download zip in release page
-1. Go to release page [https://github.com/dineshba/terraform-plan-summary/releases](https://github.com/dineshba/terraform-plan-summary/releases)
+1. Go to release page [https://github.com/hayaah/terraform-plan-summary/releases](https://github.com/hayaah/terraform-plan-summary/releases)
 2. Download the zip for your OS and unzip it
 3. Copy it to local bin using `cp tf-summarize /usr/local/bin/tf-summarize` or to location which is part of `$PATH`
 4. (For Mac Only) Give access to run if prompted. [Refer here](https://stackoverflow.com/a/19551359/5305962)
@@ -170,7 +170,7 @@ For more customization options, kindly refer to the [documentation here](https:/
 
 ##### Other approach
 
-Please refer this sample [GitHub actions file](.github/workflows/demo.yml) and the sample runs [here](https://github.com/dineshba/tf-summarize/actions/workflows/demo.yml)
+Please refer this sample [GitHub actions file](.github/workflows/demo.yml) and the sample runs [here](https://github.com/hayaah/tf-summarize/actions/workflows/demo.yml)
 
 > Note: If you are using `hashicorp/setup-terraform` GitHub action to set up terraform, ensure terraform_wrapper is set to false.
 
@@ -194,18 +194,18 @@ A full example is available at [`example/codefresh/codefresh.yaml`](/example/cod
   
   tfSummarize:
     title: Show Changes
-    image: ghcr.io/dineshba/tf-summarize
+    image: ghcr.io/hayaah/tf-summarize
     stage: show
     working_directory: "${{clone}}"
     commands:
       - tf-summarize output.json
 ```
 
-> :warning: **Not maintained by [dineshba](https://github.com/dineshba)** : The above example is maintained by [userbradley](https://github.com/userbradley) - Any questions related please tag `@userbradley` on an issue 
+> :warning: **Not maintained by [hayaah](https://github.com/hayaah)** : The above example is maintained by [userbradley](https://github.com/userbradley) - Any questions related please tag `@userbradley` on an issue 
 
 #### Comment terraform plan summary in PRs
 
-Refer [this example](https://github.com/dineshba/tf-summarize/blob/demo-pr/.github/workflows/demo.yml#L61-L73) to add comments in your PR. Sample [comment](https://github.com/dineshba/tf-summarize/pull/19#issuecomment-1295882938) added by github actions bot.
+Refer [this example](https://github.com/hayaah/tf-summarize/blob/demo-pr/.github/workflows/demo.yml#L61-L73) to add comments in your PR. Sample [comment](https://github.com/hayaah/tf-summarize/pull/19#issuecomment-1295882938) added by github actions bot.
 
 #### Interactive summary review
 

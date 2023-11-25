@@ -41,7 +41,7 @@ steps:
   
   tfSummarize:
     title: Show Changes
-    image: ghcr.io/dineshba/tf-summarize
+    image: ghcr.io/hayaah/tf-summarize
     stage: show
     working_directory: "${{clone}}"
     commands:

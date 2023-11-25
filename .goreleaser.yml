@@ -7,9 +7,9 @@ before:
 dockers:
 - dockerfile: Dockerfile
   image_templates:
-    - ghcr.io/dineshba/tf-summarize:{{ .Version }}-amd64
-    - ghcr.io/dineshba/tf-summarize:latest-amd64
-    - ghcr.io/dineshba/tf-summarize:latest
+    - ghcr.io/hayaah/tf-summarize:{{ .Version }}-amd64
+    - ghcr.io/hayaah/tf-summarize:latest-amd64
+    - ghcr.io/hayaah/tf-summarize:latest
   build_flag_templates:
     - "--label=org.opencontainers.image.created={{ .Date }}"
     - "--label=org.opencontainers.image.title={{ .ProjectName }}"
@@ -57,7 +57,7 @@ archives:
 nfpms:
   - id: tf-summarize
     package_name: tf-summarize
-    homepage: https://github.com/dineshba/tf-summarize
+    homepage: https://github.com/hayaah/tf-summarize
     description: A command-line utility to print the summary of the terraform plan
     maintainer: Dinesh Balasubramanian <dineshudt17@gmail.com>
     license: MIT
